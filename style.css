@@ -1,0 +1,217 @@
+/*just in case*/
+body {
+  background-color: #5C4742;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+.logo {
+  display: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: #C4BBAF;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 5%;
+  z-index: -2;
+  border: 5px solid #5A2A27;
+}
+
+.dog-head {
+  position: absolute;
+  width: 120px;
+  height: 90px;
+  background-color: #A05A2C;
+  border-radius: 50%;
+  margin-left: 40px;
+  margin-top: 70px;
+  z-index: 1;
+}
+
+.dog-ear {
+  position: absolute;
+  height: 50px;
+  width: 30px;
+  background-color: #5A2A27;
+  border-radius: 50%;
+  margin-top: 40px;
+  margin-left: 50px;
+}
+
+.dog-ear-tip, .dog-ear-tip-right {
+  position: absolute;
+  background-color: #5A2A27;
+  height: 25px;
+  width: 30px;
+  margin-left: -16px;
+  margin-top: 3px;
+  transform: rotate(-10deg);
+  border-radius: 50% 0px 0px 0px;
+}
+
+.dog-ear:nth-child(2) {
+  transform: skewX(-10deg);
+  margin-left: 120px;
+}
+
+.dog-ear-tip-right {
+  transform: skewX(-10deg);
+  margin-left: 15px;
+  transform: rotate(90deg);
+}
+
+.dog-eye {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-left: 25px;
+}
+
+.dog-eye-right {
+  margin-left: 60px;
+}
+
+.dog-pupil {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border-radius: 50%;
+  margin-top: 7px;
+  margin-left: 7px;
+}
+
+.nose {
+  position: absolute;
+  background-color: black;
+  width: 20px;
+  height: 12px;
+  border-radius: 50px;
+  margin-top: 55px;
+  margin-left: 48px;
+  z-index: 3;
+}
+
+.lips {
+  position: absolute;
+  height: 20px;
+  width: 30px;
+  border-bottom: 3px solid black;
+  border-radius: 40%;
+  margin-top: 55px;
+  margin-left: 50px;
+  transform: rotate(-15deg);
+  z-index: 2;
+  background-color: #A05A2C;
+}
+
+.tongue {
+  position: absolute;
+  height: 30px;
+  width: 15px;
+  background-color: pink;
+  border-radius: 90px 90px 60px 60px;
+  margin-top: 70px;
+  z-index: 1;
+  margin-left: 60px;
+  transform: rotate(-10deg);
+}
+
+.tongue:after {
+  content: '';
+  height: 15px;
+  width: 2px;
+  background-color: #F56476;
+  position: absolute;
+  margin-left: 6px;
+  margin-top: 10px;
+}
+
+.intro {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.intro > p {
+  color: #DFBBB1;
+  font-size: 1.5em;
+}
+
+.links {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.link {
+  display: inlne-block;
+  float: left;
+  width: 24%;
+  height: 64px;
+  margin-bottom: 70px;
+}
+
+.twitter {
+  background-image: url("http://katyagurina.com/logos/twitter-2.png");
+  background-size: 64px 64px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.github {
+  background-image: url("http://katyagurina.com/logos/github-logo.png");
+  background-size: 64px 64px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.linkedin {
+  background-image: url("http://katyagurina.com/logos/linkedin-logo-button.png");
+  background-size: 64px 64px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.codepen {
+  background-image: url("http://katyagurina.com/logos/codepen.png");
+  background-size: 64px 64px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.link > p {
+  margin-top: 70px;
+  color: #DFBBB1;
+  text-align: center;
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
+  background-color: #DFBBB1;
+  display: block;
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+
+.footer > p {
+  color: #5C4742;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.links > a {
+  text-decoration: none;
+}
+
+.links > a:hover {
+  font-weight: bold;
+  color: #F56476;
+}
