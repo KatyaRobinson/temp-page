@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Ubuntu Mono', monospace;
+  height: 100vh;
 }
 
 .logo {
@@ -14,7 +15,6 @@ body {
   background-color: #C4BBAF;
   border-radius: 50%;
   margin: 0 auto;
-  margin-top: 5%;
   z-index: -2;
   border: 5px solid #5A2A27;
 }
@@ -116,7 +116,7 @@ body {
   width: 15px;
   background-color: pink;
   border-radius: 90px 90px 60px 60px;
-  margin-top: 70px;
+  margin-top: 75px;
   z-index: 1;
   margin-left: 60px;
   transform: rotate(-10deg);
@@ -124,12 +124,12 @@ body {
 
 .tongue:after {
   content: '';
-  height: 15px;
+  height: 30px;
   width: 2px;
   background-color: #F56476;
   position: absolute;
   margin-left: 6px;
-  margin-top: 10px;
+  margin-top: -5px;
 }
 
 .intro {
@@ -199,12 +199,13 @@ body {
   clear: both;
   margin: 0;
   padding: 0;
+  position: fixed;
+  bottom: 0;
 }
 
 .footer > p {
   color: #5C4742;
   text-align: center;
-  padding-top: 15px;
 }
 
 .links > a {
@@ -214,4 +215,296 @@ body {
 .links > a:hover {
   font-weight: bold;
   color: #F56476;
+}
+
+/* cat styles */
+.cat-head {
+  position: absolute;
+  width: 100px;
+  height: 70px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.cat-ear {
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: black;
+  height: 35px;
+  width: 25px;
+  position: absolute;
+  margin-top: -20px;
+  margin-left: 10px;
+}
+
+.cat-ear-right {
+  margin-left: 65px;
+}
+
+.cat-eye {
+  width: 20px;
+  height: 10px;
+  position: absolute;
+  background-color: green;
+  border-radius: 50px 0 50px 0;
+  transform: rotate(15deg);
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.cat-eye-right {
+  margin-left: 60px;
+}
+
+.cat-eye:before {
+  content: '';
+  height: 10px;
+  width: 5px;
+  background-color: black;
+  position: absolute;
+  border-radius: 50%;
+  margin-left: 8px;
+}
+
+.cat-nose {
+  position: absolute;
+  width: 10px;
+  height: 8px;
+  background-color: #DFBBB1;
+  border-radius: 50%;
+  margin-top: 40px;
+  margin-left: 45px;
+}
+
+.cat-nose:after {
+  content: '';
+  height: 15px;
+  width: 15px;
+  border-bottom: 1px solid #DFBBB1;
+  border-left: 1px solid #DFBBB1;
+  position: absolute;
+  border-radius: 50%;
+  margin-left: 4px;
+  margin-top: 4px;
+}
+
+.cat-nose:before {
+  content: '';
+  height: 15px;
+  width: 15px;
+  border-bottom: 1px solid #DFBBB1;
+  border-right: 1px solid #DFBBB1;
+  position: absolute;
+  border-radius: 50%;
+  margin-left: -10px;
+  margin-top: 4px;
+}
+
+.whisker {
+  position: absolute;
+  width: 35px;
+  height: 1px;
+  background-color: white;
+  margin-left: 15px;
+}
+
+.whisker:nth-child(1) {
+  transform: rotate(-10deg);
+}
+
+.whisker:nth-child(2) {
+  margin-top: 5px;
+}
+
+.whisker:nth-child(3) {
+  margin-top: 10px;
+  transform: rotate(10deg);
+}
+
+.whiskers-left {
+  margin-left: -55px;
+  transform: scaleX(-1);
+}
+
+.cat-body {
+  position: absolute;
+  height: 100px;
+  width: 50px;
+  background-color: black;
+  margin-top: 60px;
+  margin-left: 25px;
+}
+
+.cat-body:before {
+  content: '';
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: -20px;
+}
+
+.cat-body:after {
+  content: '';
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 20px;
+  z-index: 0;
+}
+
+.paw {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 50% 50% 0% 0%;
+  margin-top: 80px;
+}
+
+.paw:nth-child(2) {
+  margin-left: 25px;
+  z-index: 1;
+}
+
+.paw-left:after {
+  content: '';
+  height: 35px;
+  width: 1px;
+  background-color: white;
+  position: absolute;
+  margin-left: 21px;
+  margin-top: -15px;
+  z-index: 2;
+}
+
+/* Animation */
+.cat-1 {
+  position: fixed;
+  bottom: 0;
+}
+
+/* cat peaks from the left bottom corner after 5sec delay*/
+.cat-1 {
+  animation-name: cat-peak;
+  animation-duration: 20s;
+  animation-delay: 10s;
+  animation-iteration-count: 2;
+}
+
+@keyframes cat-peak {
+  0%, 20% {
+    bottom: 0;
+    left: 10px;
+  }
+  10% {
+    bottom: 90px;
+    left: 10px;
+    transform: translate(0px);
+  }
+  70%, 90% {
+    transform: translate(1000px);
+    bottom: -20px;
+  }
+}
+/* when dog sees cat, his tongue dissapears*/
+.tongue, .tongue:after {
+  animation-name: tongue-dissapear;
+  animation-duration: 20s;
+  animation-delay: 10s;
+  animation-iteration-count: 2;
+}
+
+@keyframes tongue-dissapear {
+  0%, 15%, 100% {
+    height: 30px;
+  }
+  20%, 90% {
+    height: 0px;
+  }
+}
+/*when dog sees cat, his mouth changes into a surprized expression*/
+.lips {
+  animation-name: lip-change;
+  animation-duration: 20s;
+  animation-delay: 10s;
+  animation-iteration-count: 2;
+}
+
+@keyframes lip-change {
+  0%, 20%, 100% {
+    height: 20px;
+    width: 30px;
+  }
+  30%, 80% {
+    width: 10px;
+  }
+}
+/* dog looks at cat*/
+.dog-pupil {
+  animation-name: dog-look;
+  animation-duration: 20s;
+  animation-delay: 10s;
+  animation-iteration-count: 2;
+}
+
+@keyframes dog-look {
+  0%, 5%, 100% {
+    margin-left: 7px;
+    margin-top: 7px;
+  }
+  10% {
+    margin-left: 2px;
+    margin-top: 10px;
+  }
+  70%, 95% {
+    margin-left: 10px;
+    margin-top: 14px;
+  }
+}
+/* screen blacks out*/
+body {
+  animation-name: black-out;
+  animation-duration: 20s;
+  animation-delay: 10s;
+  animation-iteration-count: 2;
+}
+
+@keyframes black-out {
+  55% {
+    background-color: #5C4742;
+  }
+  60%, 85% {
+    background-color: black;
+  }
+  70% {
+    background-color: #5C4742;
+  }
+}
+.cat-2 {
+  position: fixed;
+  right: 150px;
+  bottom: 200px;
+  opacity: 0;
+}
+
+.cat-2 {
+  animation-name: cat-appear;
+  animation-duration: 20s;
+  animation-delay: 10s;
+  animation-iteration-count: 2;
+}
+
+@keyframes cat-appear {
+  0%, 61%, 77% {
+    opacity: 0;
+  }
+  63%, 75% {
+    opacity: 100;
+  }
 }
